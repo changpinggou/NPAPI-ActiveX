@@ -1,0 +1,28 @@
+HKCR
+{
+  QQGameHall.Assist.1 = s 'Tencent QQGameHall Assist'
+  {
+    CLSID = s '{10C3DA1D-B8AA-4e0a-9612-D051649B660C}'
+  }
+  QQGameHall.Assist = s 'Tencent QQGameHall Assist'
+  {
+    CLSID = s '{10C3DA1D-B8AA-4e0a-9612-D051649B660C}'
+    CurVer = s 'QQGameHall.Assist.1'
+  }
+  NoRemove CLSID
+  {
+    ForceRemove {10C3DA1D-B8AA-4e0a-9612-D051649B660C} = s 'Tencent QQGameHall Assist'
+    {
+      ProgID = s 'QQGameHall.Assist.1'
+      VersionIndependentProgID = s 'QQGameHall.Assist'
+      ForceRemove 'Programmable'
+      InprocServer32 = s '%MODULE%'
+      {
+        val ThreadingModel = s 'Apartment'
+
+      }
+      val AppID = s '%APPID%'
+      'TypeLib' = s '{93829D82-5D93-4745-8EA3-A1A43F059594}'
+    }
+  }
+}

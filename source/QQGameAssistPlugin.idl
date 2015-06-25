@@ -1,0 +1,28 @@
+// QQGameAssistPlugin.idl : QQGameAssistPlugin 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(QQGameAssistPlugin.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(EDF9E233-1D93-43D0-9211-94C04BDE2382),
+	version(1.0),
+	helpstring("QQGameAssistPlugin 1.0 类型库")
+]
+library QQGameAssistPluginLib
+{
+	importlib("stdole2.tlb");
+
+    // This COM class is what gets created when one calls
+  // new ActiveXObject("QQGameHall.Factory") in JavaScript.
+  [
+    uuid(10C3DA1D-B8AA-4e0a-9612-D051649B660C)
+  ]
+  coclass QQGameHallAssist
+  {
+    [default] interface IDispatch;
+  };
+};
